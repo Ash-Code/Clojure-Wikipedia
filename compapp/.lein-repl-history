@@ -1,0 +1,8 @@
+(start server)
+(in ns 'compapp/repl.clj)
+(use compapp.models.db)
+(in-ns compapp)
+(in-ns G:\Clojure\Practice\compapp\models\db.clj)
+(in-ns 'G:\Clojure\Practice\compapp\models\db.clj)
+(in-ns 'G:\Clojure\Practice\compapp\models)
+(in-ns "G:\Clojure\Practice\compapp\models\db.clj")
