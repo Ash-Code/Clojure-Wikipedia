@@ -15,12 +15,12 @@
 [:li
 [:h2 title]
 [:blockquote body]
-[:time timestamp]])])
+])])
 
 
 (defn home [& [title body error]]
 (layout/common
-[:h1 "Wiki"]
+[:h1 "Welcom to Wikipedia"]
 [:p error]
 (show-wiki)
 [:hr]
