@@ -8,22 +8,31 @@
 )
 
 
+(defn format-time [timestamp]
+(-> "dd/MM/yyyy"
+(java.text.SimpleDateFormat.)
+(.format timestamp)))
+
 
 (defn show-wiki []
 [:ul.guests
 (for [{:keys [body title timestamp]} (db/read-wikis)]
 [:li
 [:h2 title]
+[:time (str "Added on " (format-time timestamp))]
 [:blockquote body]
+
 ])])
+
 
 
 (defn home [& [title body error]]
 (layout/common
-[:h1 "Welcom to Wikipedia"]
+[:h1 "Welcome to Wikipedia"]
 [:p error]
 (show-wiki)
 [:hr]
+[:h1 "Add an entry "]
 (form-to [:post "/"]
 [:p "Title:"]
 (text-field "title" title)
